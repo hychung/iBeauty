@@ -1,0 +1,22 @@
+<div style="margin-left: -10px; width: calc(100% + 20px);">
+    <img src="{{item.image}}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+</div>
+<div id="itemDetail-markdown3" style="color:#000000;">
+    <p>{{item.desc}}</p>
+</div>
+<div id="itemDetail-markdown5" style="color:#C77931;text-align:right;">
+    <p>
+        <strong>Unit Price:</strong>{{item.price}}</p>
+</div>
+<form id="itemDetail-form4" class="list">
+    <label class="item item-input" id="itemDetail-input7">
+        <span class="input-label">Quantity</span>
+        <input type="number" placeholder="0" min=0 ng-model="item.quantity">
+    </label>
+</form>
+<div id="itemDetail-markdown4" style="color:#000000;">
+    <p>
+        <strong>SubTotal:</strong>{{item.quantity * item.price}}</p>
+</div>
+<button id="itemDetail-button12" class="button button-positive  button-block icon ion-ios-cart" ng-click="add()">Add to Cart</button>
+<button id="itemDetail-button14" class="button button-assertive  button-block icon ion-android-delete" ng-click="delete()">Delete Item</button>

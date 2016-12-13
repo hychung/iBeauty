@@ -1,0 +1,31 @@
+<ion-view title="Shop" hide-nav-bar="true" id="page2">
+  <ion-content padding="false" class="manual-ios-statusbar-padding">
+    <div id="shop-button-bar1" class="button-bar">
+      <button ng-click="catC()" id="shop-button8" class="button button-royal  button-block">Cloth</button>
+      <button ng-click="catA()" id="shop-button9" class="button button-royal  button-full">Accessory</button>
+    </div>
+    <form id="shop-form4" class="list">
+      <label class="item item-input" id="shop-search2">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="">
+      </label>
+    </form>
+    <div class="list card" id="shop-card21" ng-repeat="item in items">
+
+      <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
+        <div class=" item item-image" style="margin-left: -10px; width: calc(100% + 20px);">
+          <a style="display:block;" ui-sref="itemDetail({ id:'{{item.id}}'})">
+            <img src="{{item.image}}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </a>
+    </div>
+      </div>
+      <div class="item item-body" id="shop-list-item-container2">
+        <div id="men-markdown7" style="margin-top:0px;color:#000000;">
+            <p>{{item.name}}
+            </p>
+        </div>
+      </div>
+    </div>
+    
+  </ion-content>
+</ion-view>

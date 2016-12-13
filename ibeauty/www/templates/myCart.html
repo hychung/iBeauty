@@ -1,0 +1,13 @@
+<ion-view title="MyCart" id="page3">
+  <ion-content padding="true" class="has-header">
+    <h3 id="myCart-heading5" style="color:#000000;">My Shopping Cart:</h3>
+    <ion-list id="myCart-list5">
+      <ion-item class="item-thumbnail-left" id="myCart-list-item9" ui-sref="tabsController.itemDetail({id:'{{item.id}}'})" ng-repeat="item in items">
+        <img src="{{item.image}}">
+        <h2>{{item.name}}</h2>
+        <p>${{item.price}} x {{item.quantity}} = ${{item.price * item.quantity}}</p>
+    </ion-list>
+    <h2 id="myCart-heading6" style="color:#000000;">Total: $ {{total}}</h2>
+    <button id="myCart-button13" class="button button-positive  button-block">Place Order</button>
+  </ion-content>
+</ion-view>
